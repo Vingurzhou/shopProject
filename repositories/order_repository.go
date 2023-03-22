@@ -134,7 +134,7 @@ func (o *OrderMangerRepository) SelectAllWithInfo() (OrderMap map[int]map[string
 	if errConn := o.Conn(); errConn != nil {
 		return nil, errConn
 	}
-	sql := "Select o.ID,p.productName,o.orderStatus From mall.order as o left join product as p on o.productID=p.ID"
+	sql := "Select o.id,p.product_name,o.order_status From zwzmicro_shop.order as o left join zwzmicro_shop.product as p on o.product_id=p.id"
 	rows, errRows := o.mysqlConn.Query(sql)
 	if errRows != nil {
 		return nil, errRows

@@ -8,7 +8,7 @@ import (
 
 // NewMysqlConn 创建mysql 连接
 func NewMysqlConn() (db *sql.DB, err error) {
-	db, err = sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/mall?charset=utf8")
+	db, err = sql.Open("mysql", "root:Z00a0319@tcp(127.0.0.1:3306)/zwzmicro_shop?charset=utf8")
 	return
 }
 
@@ -68,7 +68,7 @@ func GetResultRows(rows *sql.Rows) map[int]map[string]string {
 
 // NewGormMysqlConn Gorm 模式
 func NewGormMysqlConn() (db *gorm.DB, err error) {
-	dsn := "root:@tcp(127.0.0.1:3306)/mall?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:Z00a0319@tcp(127.0.0.1:3306)/zwzmicro_shop?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	return
 }
